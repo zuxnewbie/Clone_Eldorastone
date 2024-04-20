@@ -1,0 +1,19 @@
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -6px;
+  margin-right: -6px;
+}
+
+.col {
+  // padding-left: 6px;
+  // padding-right: 6px;
+}
+
+
+
+[class*="col-"] {
+  width: 100%;
+}
+

@@ -1,0 +1,197 @@
+.section-inspiration {
+  // margin-top: 100px;
+  // padding: 90px;
+  padding: 80px 150px 120px 150px;
+
+  background-color: #fcfcfc;
+  .row-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .col-top {
+      h6.lined-heading {
+        display: table;
+        margin-bottom: 30px;
+        width: 100%;
+        padding-right: 30px;
+        white-space: nowrap;
+        letter-spacing: 0.2em;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #9f662d;
+
+        &::after {
+          border-top: 1px solid #9f662d;
+          content: "";
+          display: table-cell;
+          position: relative;
+          top: 12px;
+          width: 100%;
+          left: 30px;
+        }
+      }
+
+      h3 {
+        font-size: 36px;
+        font-weight: 300;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        color: #9f662d;
+      }
+
+      p {
+        font-family: "Montserrat", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        line-height: 1.65;
+        font-size: 16px;
+        margin-bottom: 26px;
+        color: #243746;
+      }
+    }
+  }
+
+  .row-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 11px;
+    .col-center {
+      width: calc(33.33333% - 11px);
+      position: relative;
+
+      .prod-wrap {
+        width: 100%;
+        aspect-ratio: 0.87234043;
+        object-fit: cover;
+
+        .full-fill {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+
+        img {
+          vertical-align: middle;
+        }
+
+        h4 {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 2;
+          padding: 20px 30px;
+          margin: 0;
+          color: #fff;
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 100%;
+          background: rgba(117, 133, 146, 0.5);
+          backdrop-filter: blur(8px);
+          letter-spacing: 0.1em;
+        }
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .row-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    .col-bottom {
+      width: 100%;
+      p {
+        text-align: center;
+        font-family: "Montserrat", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        line-height: 1.65;
+        // font-size: 18px;
+        margin-bottom: 26px;
+        color: #243746;
+        .btn-bottom {
+          text-decoration: none;
+          text-transform: uppercase;
+          margin: 0 auto;
+          width: max-content;
+          background-color: #758592;
+          color: #fff;
+          border: 1px solid transparent;
+          padding: 15px;
+
+          .arrows {
+            position: relative;
+            width: 17px;
+            height: 7.36px;
+            overflow: hidden;
+            margin-top: 3.5px;
+            margin-left: 15px;
+
+            .fa-minus {
+              color: #fff;
+              stroke: currentColor;
+            }
+
+            .fa-arrow-right {
+              display: none;
+              position: absolute;
+              color: #fff;
+              height: 7.36px;
+              width: 17px;
+              fill: currentColor;
+              top: 2px;
+              left: -1px;
+              transition: 0.2s;
+            }
+          }
+
+          &:hover {
+            background-color: #243746;
+            .fa-minus {
+              // display: none;
+            }
+            .fa-arrow-right {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 986px) and (max-width: 1190px) {
+  .section-inspiration {
+    padding: 40px 70px 60px 70px;
+  }
+}
+
+@media only screen and (min-width: 770px) and (max-width: 985px) {
+  .section-inspiration {
+    padding: 40px 70px 60px 70px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 769px) {
+  .section-inspiration {
+    padding: 30px 80px 30px 80px;
+
+    .row-center{
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 16px;
+      
+      .col-center{
+        width: 100%;
+      }
+    }
+  }
+}

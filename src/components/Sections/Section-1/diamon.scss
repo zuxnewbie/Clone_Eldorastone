@@ -1,0 +1,139 @@
+.section {
+  display: flex;
+  z-index: 1001;
+  justify-content: space-between;
+  align-items: center;
+  // padding-top: 120px;
+  // padding-bottom: 120px;
+  padding: 40px 150px 120px 150px;
+  position: relative;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: #f5f4f2;
+  .container {
+    z-index: 1;
+    width: 60%;
+    .hihi {
+      align-items: center !important;
+
+      .row-content {
+        // padding: 0 100px;
+
+        h3 {
+          font-size: 36px;
+          font-weight: 300;
+          margin-bottom: 30px;
+          text-transform: uppercase;
+          font-family: "Montserrat", Helvetica, Arial, sans-serif;
+          position: relative;
+          color: #9f662d;
+        }
+        p {
+          font-family: "Montserrat", Helvetica, Arial, sans-serif;
+          font-weight: 400;
+          line-height: 1.65;
+          font-size: 18px;
+          margin-bottom: 26px;
+          color: #243746;
+        }
+      }
+    }
+  }
+
+  .img-right {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    // z-index: 99;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media only screen and (min-width: 986px) and (max-width: 1190px) {
+}
+
+@media only screen and (min-width: 770px) and (max-width: 985px) {
+  .section {
+    padding: 0;
+    display: flex;
+    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .container {
+      flex-direction: column;
+      // width: 100%;
+      .hihi {
+        .row-content {
+          padding: 0px;
+          text-align: center;
+          h3 {
+            text-align: center;
+          }
+          p {
+            letter-spacing: 1.5px;
+          }
+        }
+      }
+    }
+    .img-right {
+      position: relative;
+      margin: 10px 0;
+      left: 0;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 769px) {
+  .section {
+    padding: 0;
+
+    display: flex;
+    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0;
+    // margin-top: 50px;
+    .container {
+      flex-direction: column;
+      // width: 100%;
+      .hihi {
+        .row-content {
+          padding: 0px;
+          text-align: center;
+          h3 {
+            text-align: center;
+            font-size: 24px;
+          }
+          p {
+            letter-spacing: 1.5px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .img-right {
+      position: static;
+      margin: 10px 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
