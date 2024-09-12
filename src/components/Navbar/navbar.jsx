@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./navbar.scss";
+import { Outlet, Link } from "react-router-dom";
 
 const Navbar = (props) => {
 
@@ -79,14 +80,14 @@ const Navbar = (props) => {
 
               
               <li className="nav-item dropdown menu-item">
-                <span href='a' className="nav-link nav-link-about">About Us
+                <Link to={`about`} className="nav-link nav-link-about">About Us
                   <ul className="dropdown-menu">
                     <li className="li-hover"><a href="a" className="dropdown-item menu-item">Our Story</a></li>
                     <li className="li-hover"><a href="a" className="dropdown-item menu-item">Press</a></li>
                     <li className="li-hover"><a href="a" className="dropdown-item menu-item">Associations</a></li>
                     <li className="li-hover"><a href="a" className="dropdown-item menu-item">Certifications</a></li>
                   </ul>
-                </span>
+                </Link >
                 {/* more drop in below */}
               </li>
 
@@ -108,7 +109,7 @@ const Navbar = (props) => {
                   </ul></a>
               </li>
               <li className="nav-item  dropdown menu-item">
-                <a href='a' className="nav-link nav-link-imagine">Imagine
+                <Link to={`about`} className="nav-link nav-link-imagine">Imagine
                 <ul className="dropdown-menu">
                     <li className="li-hover"><a href="a" className="dropdown-item menu-item">Inspiration Galleries</a></li>
                     <li className="li-hover"><a href="a" className="dropdown-item menu-item">Stone Visualizer</a></li>
@@ -117,7 +118,7 @@ const Navbar = (props) => {
                     <li className="li-hover"><a href="a" className="dropdown-item menu-item">Video Library</a></li>
                     <li className="li-hover"><a href="a" className="dropdown-item menu-item">Design Partners</a></li> 
                   </ul>
-                </a>
+                </Link>
               </li>
               <li className="nav-item  dropdown menu-item">
                 <a href='a' className="nav-link nav-link-resources">Resources
@@ -133,14 +134,14 @@ const Navbar = (props) => {
                   </ul></a>
               </li>
               <li className="nav-item dropdown menu-item">
-                <a href='a' className="nav-link-where">Where to buy</a>
+                <a href='a' className="nav-link nav-link-where">Where to buy</a>
               </li>
             </ul>
           </div>
         </div>
 
 
-        <span className="navbar-brand dropdown" id="dropdownContent" onClick={toggleDropdown}><i class="fa-solid fa-bars"></i></span>
+        <span className="navbar-brand dropdown" id="dropdownContent" onClick={toggleDropdown}><i className="fa-solid fa-bars"></i></span>
           {showDropdown && (
            <div className={`dropdown-content ${showDropdown ? 'show' : ''}`} aria-labelledby="dropdown-1">
             <div className="">
@@ -211,7 +212,7 @@ const Navbar = (props) => {
                 <li className={`show-li  ${contentResources ? 'wrapper-where' : ''}`}>
                   <a href="aht" target="">Where to buy</a>
                 </li><hr/>
-                <li>
+                <li className='show-li'>
                   <a href="aht" target="">Blog</a>
                 </li>
               </ul>

@@ -2,7 +2,7 @@ import "./diamon.scss";
 
 const SectionDiamon = (props) => {
   return (
-    <div className="section" style={{backgroundColor: "white", marginTop: "60px"}}>
+    <div className="section" style={{backgroundColor: "white"}}>
       <div className="container">
         <div class="hihi">
           <div class="row-content">

@@ -1,4 +1,33 @@
 import "./footer.scss";
+import React, { useEffect } from 'react';
+import badge from '../../../src/assets/image/badge.png'
+
+const DMCABadge = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://images.dmca.com/Badges/DMCABadgeHelper.min.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  return (
+    <a
+      href="//www.dmca.com/Protection/Status.aspx?ID=4af37aa6-11d6-4b5a-9a40-52481259d675"
+      title="DMCA.com Protection Status"
+      className="dmca-badge"
+    >
+      <img
+        src={badge}
+        alt="DMCA.com Protection Status"
+        style={{width: '22%'}}
+      />
+    </a>
+  );
+};
 
 const Footer = (props) => {
   return (
@@ -10,7 +39,7 @@ const Footer = (props) => {
               <p class="eyebrow lined" >
                 <span>OUR MISSION</span>
               </p>
-              <p style={{marginBottom: "40px;", fontSize: "12px"}}>
+              <p style={{marginBottom: "40px;"}}>
                 For over 50 years, Eldorado Stone has demonstrated an undeniable
                 passion for creating authentic products that elevate not only
                 quality and design but also attainability.
@@ -20,7 +49,7 @@ const Footer = (props) => {
                 <span>Media + Awards</span>
               </p>
 
-              <p style={{ fontSize: "12px"}}>
+              <p >
                 As a brand leader, Eldorado Stone has been featured in a variety
                 of publications and has been recognized with awards by
                 tastemakers in the industry.
@@ -143,6 +172,7 @@ const Footer = (props) => {
                   Corporate
                 </a>
               </p>
+              <DMCABadge />
               <p class="small">
                 COPYRIGHT © 2024. WESTLAKE ROYAL STONE, LLC.
                 <br />

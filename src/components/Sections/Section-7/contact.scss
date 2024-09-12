@@ -118,7 +118,38 @@
   }
 }
 
+
+
+@media only screen and (min-width: 1200px){
+  .section-contact{
+    .left{
+      .row-content{
+        .col-left{
+          h6.lined-heading{
+            font-size: 30px;
+          }
+          h3{
+            font-size: 42px;
+          }
+          p{
+            font-size: 26px;
+          }
+        }
+      }
+
+    }
+    
+  }
+
+}
+
+
+
 @media only screen and (min-width: 986px) and (max-width: 1190px) {
+  .section-contact{
+    padding: 40px 70px 60px 70px;
+
+  }
 }
 
 @media only screen and (min-width: 770px) and (max-width: 985px) {
@@ -127,10 +158,22 @@
     display: flex;
     flex-direction: column-reverse;
     .left {
+      width: 100%;
       .row-content {
         .col-left {
-          p.btn-bottom {
-            width: 40%;
+          h6{
+            font-size: 18px !important;
+          }
+          h3{
+            font-size: 32px ;
+          }
+          p{
+            font-size: 24px;
+            letter-spacing: 0;
+            .btn-bottom {
+              font-size: 16px;
+              width: 40%;
+            }
           }
         }
       }
@@ -138,7 +181,7 @@
 
     .img-right{
       position: relative;
-      left: 10%;
+      left: 5%;
     }
   }
 }
@@ -146,22 +189,34 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 769px) {
   .section-contact {
-    padding: 60px;
+    padding: 30px 20px 30px 20px;
+
     flex-direction: column-reverse;
     .left {
       width: auto;
+      // padding: 20px;
       .row-content {
         .col-left {
-          p.btn-bottom {
-            width: 40%;
+          h6{
+            font-size: 18px !important;
+          }
+          h3{
+            font-size: 32px ;
+          }
+          p{
+            font-size: 24px;
+            letter-spacing: 0;
+            .btn-bottom {
+              font-size: 16px;
+            }
           }
         }
       }
     }
 
     .img-right{
-      position: relative;
-      left: 10%;
+      position: static;
+      // left: 5%;
     }
   }
 }
