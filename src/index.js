@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home/home";
 import ErrorPage from "./pages/Error/error";
 import AboutPage from "./pages/About/about";
+import DMCA from "./pages/dmca/dmca";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <AboutPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/dmca-validation.html",
+    element: <DMCA />,
     errorElement: <ErrorPage />,
   },
   
