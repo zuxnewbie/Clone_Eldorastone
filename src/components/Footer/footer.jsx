@@ -8,24 +8,19 @@ const DMCABadge = () => {
     script.src = 'https://images.dmca.com/Badges/DMCABadgeHelper.min.js';
     script.async = true;
     document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
   }, []);
 
   return (
-    <a
-      href="//www.dmca.com/Protection/Status.aspx?ID=4af37aa6-11d6-4b5a-9a40-52481259d675"
-      title="DMCA.com Protection Status"
-      className="dmca-badge"
-    >
+    <>
+      <a href="//www.dmca.com/Protection/Status.aspx?ID=38120b66-9611-41f8-a8f1-d1c7b548e8be" title="DMCA.com Protection Status" className="dmca-badge">
       <img
-        src={badge}
+        src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=38120b66-9611-41f8-a8f1-d1c7b548e8be"
         alt="DMCA.com Protection Status"
-        style={{width: '22%'}}
+          style={{width: '22%'}}
       />
     </a>
+    <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+    </>
   );
 };
 
